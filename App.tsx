@@ -20,7 +20,6 @@ const App: React.FC = () => {
       <div className="w-full relative">
         <Navbar />
         <Hero />
-        <Marquee />
         
         {/* Capability Section: Skills & Domains */}
         <Philosophy />

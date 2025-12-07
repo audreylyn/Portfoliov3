@@ -7,9 +7,16 @@ interface Contribution {
   level: number;
 }
 
+interface GitHubStats {
+  public_repos: number;
+  private_repos: number;
+  followers: number;
+}
+
 const Philosophy: React.FC = () => {
   const [contributions, setContributions] = useState<Contribution[]>([]);
   const [totalContributions, setTotalContributions] = useState(0);
+  const [githubStats, setGithubStats] = useState<GitHubStats>({ public_repos: 39, private_repos: 8, followers: 6 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,6 +38,20 @@ const Philosophy: React.FC = () => {
         
         const total = recentContributions.reduce((acc: number, curr: Contribution) => acc + curr.count, 0);
         setTotalContributions(total);
+
+        // Fetch GitHub profile stats
+        const profileResponse = await fetch('https://api.github.com/users/audreylyn');
+        if (profileResponse.ok) {
+          const profileData = await profileResponse.json();
+          // Calculate private repos (total_private_repos is not available via public API, so we hardcode it)
+          // You have 47 total repos - public_repos = private_repos
+          const totalRepos = 47; // Update this if your total changes
+          setGithubStats({
+            public_repos: profileData.public_repos,
+            private_repos: totalRepos - profileData.public_repos,
+            followers: profileData.followers
+          });
+        }
         
       } catch (error) {
         console.error('Error loading GitHub contributions:', error);
@@ -83,7 +104,7 @@ const Philosophy: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-stone-50 dark:bg-[#050505] border-b border-stone-200 dark:border-white/5 transition-colors duration-500">
+    <section id="about" className="py-24 px-6 md:px-12 bg-stone-50 dark:bg-[#050505] border-b border-stone-200 dark:border-white/5 transition-colors duration-500">
       <div className="max-w-screen-2xl mx-auto">
         
         {/* Header Section - Full Width to remove empty space */}
@@ -145,10 +166,10 @@ const Philosophy: React.FC = () => {
               {/* GitHub Graph - Spans 3 columns */}
               <div className="xl:col-span-3">
                   <div className="flex items-center justify-between mb-8">
-                     <div className="flex items-center gap-3">
+                     <a href="https://github.com/audreylyn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group hover:opacity-70 transition-opacity">
                         <Github className="w-5 h-5 text-stone-900 dark:text-white" />
-                        <span className="text-sm font-bold uppercase tracking-wider text-stone-900 dark:text-white">Open Source Activity</span>
-                     </div>
+                        <span className="text-sm font-bold uppercase tracking-wider text-stone-900 dark:text-white">GitHub Contributions</span>
+                     </a>
                      <div className="text-right">
                         <span className="font-display font-bold text-2xl text-stone-900 dark:text-white block">{totalContributions}</span>
                         <span className="text-[10px] text-stone-500 uppercase">Contributions (Last Year)</span>
@@ -176,16 +197,16 @@ const Philosophy: React.FC = () => {
               {/* Stats - Vertical Column */}
               <div className="xl:col-span-1 flex flex-row xl:flex-col justify-between gap-8 border-t xl:border-t-0 xl:border-l border-stone-200 dark:border-white/10 pt-8 xl:pt-0 xl:pl-12">
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">PLV</span>
-                    <span className="text-xs text-stone-500 uppercase tracking-widest">Education</span>
+                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">{githubStats.public_repos}</span>
+                    <span className="text-xs text-stone-500 uppercase tracking-widest">Public Repos</span>
                   </div>
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">IT</span>
-                    <span className="text-xs text-stone-500 uppercase tracking-widest">Office OJT</span>
+                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">8</span>
+                    <span className="text-xs text-stone-500 uppercase tracking-widest">Private Repos</span>
                   </div>
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">100%</span>
-                    <span className="text-xs text-stone-500 uppercase tracking-widest">Dedication</span>
+                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">{githubStats.followers}</span>
+                    <span className="text-xs text-stone-500 uppercase tracking-widest">Followers</span>
                   </div>
               </div>
 
