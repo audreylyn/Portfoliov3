@@ -20,6 +20,7 @@ interface Project {
   description: string;
   details: string;
   features: string[];
+  gallery: string[];
   theme: {
     light: ThemeConfig;
     dark: ThemeConfig;
@@ -37,6 +38,7 @@ const projects: Project[] = [
     description: 'Pamantasan ng Lungsod ng Valenzuela (PLV) IT Office located at 8 Tongco, Maysan, Valenzuela City.',
     details: 'The IT Office at PLV serves as the central hub for the university\'s technical infrastructure. Located at 8 Tongco, Maysan, Valenzuela City, 1442 Metro Manila, it handles network administration, hardware maintenance, and software support for the institution.',
     features: ['PLV Maysan', 'Tongco St.', 'Tech Support', 'Education Sector'],
+    gallery: ['images/host1.jpg', 'images/host2.jpg', 'images/host3.jpg', 'images/host4.jpg'],
     theme: {
         light: { mainBg: '#f5f5f4', subBg: '#fafaf9', text: '#57534e', title: '#1c1917', border: '#e7e5e4' }, // Stone
         dark: { mainBg: '#1c1917', subBg: '#0c0a09', text: '#a8a29e', title: '#fafaf9', border: 'rgba(255,255,255,0.05)' }
@@ -52,6 +54,7 @@ const projects: Project[] = [
     description: 'Directly supervised by Sir Diomil Agbayani (09201063627), ensuring streamlined technical operations.',
     details: 'I reported directly to Sir Diomil Agbayani throughout my internship. The supervision structure was collaborative, allowing for hands-on learning in troubleshooting and resolving technical issues while maintaining professional documentation standards.',
     features: ['Sir Diomil Agbayani', 'Direct Reporting', 'Collaboration', 'Guidance'],
+    gallery: ['images/supervision1.jpg', 'images/supervision2.jpg', 'images/supervision3.jpg', 'images/supervision4.jpg'],
     theme: {
         light: { mainBg: '#f1f5f9', subBg: '#f8fafc', text: '#475569', title: '#0f172a', border: '#e2e8f0' }, // Slate
         dark: { mainBg: '#0f172a', subBg: '#020617', text: '#94a3b8', title: '#f1f5f9', border: 'rgba(255,255,255,0.05)' }
@@ -67,6 +70,7 @@ const projects: Project[] = [
     description: 'Adhering to a reporting schedule of Monday to Saturday, 8:00 AM – 5:00 PM.',
     details: 'My internship followed a rigorous six-day work week schedule from 8:00 AM to 5:00 PM. This consistency allowed me to be fully immersed in the daily operations of the IT department, from morning system checks to end-of-day reporting.',
     features: ['Monday-Saturday', '8:00 AM - 5:00 PM', 'Full Time', 'On-Site'],
+    gallery: [],
     theme: {
         light: { mainBg: '#fff7ed', subBg: '#fffaf5', text: '#c2410c', title: '#431407', border: '#ffedd5' }, // Orange
         dark: { mainBg: '#2a100a', subBg: '#1a0b06', text: '#fdba74', title: '#fff7ed', border: 'rgba(255,255,255,0.05)' }
@@ -76,12 +80,13 @@ const projects: Project[] = [
     id: '04',
     name: 'Duties',
     location: 'Scope of Work',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop',
+    image: 'images/dutybg.jpg',
     type: 'Responsibilities',
     valuation: 'Technical',
     description: 'Assisting with hardware/software installation, setup, troubleshooting, maintenance, and management.',
     details: 'My agreed program of work included assisting with hardware and software installation, setting up new computer systems, troubleshooting defective units, conducting system maintenance and updates, and participating in inventory management.',
     features: ['Installation', 'Troubleshooting', 'Maintenance', 'Setup'],
+    gallery: ['images/duties2.png', 'images/duties3.jpeg', 'images/duties4.jpg', 'images/duties5.jpg'],
     theme: {
         light: { mainBg: '#f0fdf4', subBg: '#f5fdf7', text: '#15803d', title: '#14532d', border: '#dcfce7' }, // Emerald
         dark: { mainBg: '#062c20', subBg: '#021812', text: '#86efac', title: '#f0fdf4', border: 'rgba(255,255,255,0.05)' }
@@ -91,12 +96,13 @@ const projects: Project[] = [
     id: '05',
     name: 'Outputs',
     location: 'Sample Works',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop',
+    image: 'images/output1.jpg',
     type: 'Deliverables',
     valuation: 'Documentation',
     description: 'Produced installation logs, maintenance schedules, system configuration docs, and progress reports.',
     details: 'While some tasks were confidential, my outputs included preparing detailed documentation and daily reports. I also produced installation and troubleshooting logs, maintenance schedules, and photos of hardware setups (where permitted).',
     features: ['Logs', 'Schedules', 'Reports', 'Configuration'],
+    gallery: ['images/output1.jpg', 'images/output2.jpeg', 'images/output3.jpg', 'images/output4.jpg'],
     theme: {
         light: { mainBg: '#eff6ff', subBg: '#f5f8ff', text: '#1d4ed8', title: '#1e3a8a', border: '#dbeafe' }, // Blue
         dark: { mainBg: '#172554', subBg: '#0b1129', text: '#93c5fd', title: '#eff6ff', border: 'rgba(255,255,255,0.05)' }
@@ -283,12 +289,11 @@ const Portfolio: React.FC = () => {
                     <div className="space-y-6">
                       <h3 className="text-xl font-display text-stone-900 dark:text-white">Visual Context</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                         <div className="aspect-[4/3] bg-stone-200 dark:bg-stone-900 overflow-hidden group/img">
-                            <img src={selectedProject.image} className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700 scale-125 group-hover/img:scale-100" alt="Detail 1" />
-                         </div>
-                         <div className="aspect-[4/3] bg-stone-200 dark:bg-stone-900 overflow-hidden group/img">
-                            <img src={selectedProject.image} className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700 scale-150 group-hover/img:scale-100" alt="Detail 2" />
-                         </div>
+                        {selectedProject.gallery.map((img, idx) => (
+                          <div key={idx} className="aspect-[4/3] bg-stone-200 dark:bg-stone-900 overflow-hidden group/img">
+                            <img src={img} className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700 scale-125 group-hover/img:scale-100" alt={`${selectedProject.name} Detail ${idx + 1}`} />
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>

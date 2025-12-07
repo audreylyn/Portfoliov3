@@ -30,7 +30,7 @@ const BentoGrid: React.FC = () => {
       <div className="max-w-screen-2xl mx-auto">
         <div className="mb-16">
             <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-2 block">Get in Touch</span>
-            <h2 className="text-3xl md:text-5xl font-display text-stone-900 dark:text-white">Let's start a <span className="text-stone-400 dark:text-stone-600 underline--magical">conversation.</span></h2>
+            <h2 className="text-3xl md:text-5xl font-display text-stone-900 dark:text-white">Let's start a <span className="underline--magical">conversation.</span></h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">

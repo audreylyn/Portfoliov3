@@ -87,11 +87,16 @@ const Philosophy: React.FC = () => {
     'HTML5 & CSS3', 
     'JavaScript (ES6+)', 
     'PHP / Laravel', 
-    'MySQL Database', 
+    'MySQL/PostgreSQL', 
     'React.js', 
-    'Tailwind CSS', 
+    'Next.js', 
+    'Tailwind/Bootstrap/Shadcn UI', 
     'Figma UI/UX', 
-    'Git Version Control'
+    'Git Version Control',
+    'Microsoft Azure',
+    'CI/CD Pipelines',
+    'N8N',
+    'App Scripts',
   ];
 
   const softSkills = [

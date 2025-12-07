@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             {/* Stats */}
             <div className="pt-8 flex gap-8 border-t border-stone-200 dark:border-white/10">
                 <div className="text-center">
-                    <span className="block text-3xl font-display text-orange-600 dark:text-orange-500 font-bold">3rd</span>
+                    <span className="block text-3xl font-display text-orange-600 dark:text-orange-500 font-bold">4th</span>
                     <span className="text-[10px] uppercase tracking-widest text-stone-500">Year Student</span>
                 </div>
                 <div className="w-px bg-stone-200 dark:bg-white/10 h-10 self-center"></div>
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
                 <div className="w-px bg-stone-200 dark:bg-white/10 h-10 self-center"></div>
                 <div className="text-center">
                     <span className="block text-3xl font-display text-orange-600 dark:text-orange-500 font-bold">WEB</span>
-                    <span className="text-[10px] uppercase tracking-widest text-stone-500">Developer</span>
+                    <span className="text-[10px] uppercase tracking-widest text-stone-500">Designer/Developer</span>
                 </div>
             </div>
         </div>
@@ -68,9 +68,9 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 border border-stone-900/20 dark:border-white/20 -rotate-1 bg-stone-100 dark:bg-stone-900 z-0 rounded-sm"></div>
             
             <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                src="images/hero_image.png" 
                 alt="Audreylyn Moraña" 
-                className="relative z-10 w-full max-w-md h-[500px] md:h-[600px] object-cover grayscale contrast-125 border border-stone-900/10 dark:border-white/10 shadow-xl" 
+                className="relative z-10 w-full max-w-md h-[500px] md:h-[600px] object-cover contrast-125 border border-stone-900/10 dark:border-white/10 shadow-xl" 
             />
             
             {/* Animated Flower Badge */}
@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                         {/* Text */}
                         <text className="badge-text text-[11px] font-bold uppercase tracking-[0.1em] fill-stone-900 dark:fill-white">
                             <textPath href="#link-circle-alt" startOffset="50%" textAnchor="middle">
-                                • GENUINE QUALITY • EST. 2024
+                                DESIGN • DEVELOP • DEPLOY • DESIGN • DEVELOP • DEPLOY •
                             </textPath>
                         </text>
                     </svg>
