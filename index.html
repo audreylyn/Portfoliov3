@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,86 +7,9 @@
     <meta name="keywords" content="Audreylyn Moraña, Portfolio, Web Developer, UI/UX Designer, BSIT, Frontend Development, React, Tailwind CSS">
     <meta name="author" content="Audreylyn Moraña">
     <title>Audreylyn Moraña Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Open Sans"', 'sans-serif'],
-                        display: ['"Playfair Display"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0c0a09;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #44403c;
-            border-radius: 2px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #78716c;
-        }
-
-        /* Typography Override */
-        body { font-family: 'Open Sans', sans-serif; }
-        .font-display { font-family: 'Playfair Display', serif; }
-
-        /* Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            animation: marquee 40s linear infinite;
-        }
-
-        /* Horizontal Scroll Hide */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Smooth Image Reveal */
-        .group:hover .reveal-info {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Utility for fixed background */
-        .fixed-attachment {
-            background-attachment: fixed;
-        }
-
-        /* Magical Underline */
-        .underline--magical {
-            background-image: var(--magical-gradient, linear-gradient(120deg, #ea580c 0%, #fb923c 100%));
-            background-repeat: no-repeat;
-            background-size: 100% 0.2em;
-            background-position: 0 88%;
-            transition: background-size 0.25s ease-in;
-        }
-        
-        .underline--magical:hover {
-            background-size: 100% 88%;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <script type="importmap">
 {
   "imports": {
@@ -99,7 +22,8 @@
 }
 </script>
 </head>
-<body class="bg-stone-50 text-stone-900 dark:bg-[#050505] dark:text-stone-300 antialiased selection:bg-orange-900/30 selection:text-orange-900 dark:selection:text-orange-100 transition-colors duration-500">
+<body class="bg-stone-50 text-stone-900 dark:bg-[#050505] dark:text-stone-300 antialiased selection:bg-orange-900/30 selection:text-orange-900 dark:selection:text-orange-100 transition-colors duration-500 text-lg font-medium">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #0c0a09;
+}
+::-webkit-scrollbar-thumb {
+    background: #44403c;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #78716c;
+}
+
+/* Typography Override */
+body { 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem; /* Slightly larger */
+    font-weight: 500; /* Medium/Bold */
+}
+.font-display { font-family: 'Playfair Display', serif; }
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+    animation: marquee 40s linear infinite;
+}
+
+/* Horizontal Scroll Hide */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Smooth Image Reveal */
+.group:hover .reveal-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Utility for fixed background */
+.fixed-attachment {
+    background-attachment: fixed;
+}
+
+/* Magical Underline */
+.underline--magical {
+    background-image: var(--magical-gradient, linear-gradient(120deg, #ea580c 0%, #fb923c 100%));
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline--magical:hover {
+    background-size: 100% 88%;
+}
