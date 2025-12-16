@@ -95,17 +95,17 @@ const Chatbot: React.FC = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-24 right-6 z-50 w-[90vw] md:w-[400px] max-h-[600px] h-[70vh] bg-stone-50 dark:bg-[#111] border border-stone-200 dark:border-white/10 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right ${
+        className={`fixed bottom-24 right-6 z-50 w-[90vw] md:w-[400px] max-h-[600px] h-[70vh] bg-stone-50 border border-stone-200 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right ${
           isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-10 pointer-events-none'
         }`}
       >
         {/* Header */}
-        <div className="p-4 border-b border-stone-200 dark:border-white/10 bg-white dark:bg-[#161616] rounded-t-2xl flex items-center gap-3">
-          <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/20 rounded-full flex items-center justify-center text-orange-600 dark:text-orange-500">
+        <div className="p-4 border-b border-stone-200 bg-white rounded-t-2xl flex items-center gap-3">
+          <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">
             <Bot className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="font-display font-bold text-stone-900 dark:text-white">Audreylyn's AI</h3>
+            <h3 className="font-display font-bold text-stone-900">Audreylyn's AI</h3>
             <span className="text-[10px] uppercase tracking-widest text-stone-500 flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
               Online
@@ -114,7 +114,7 @@ const Chatbot: React.FC = () => {
         </div>
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-stone-50/50 dark:bg-black/20">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-stone-50/50">
           {messages.map((msg, index) => (
             <div
               key={index}
@@ -123,8 +123,8 @@ const Chatbot: React.FC = () => {
               <div
                 className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
                   msg.role === 'user'
-                    ? 'bg-stone-900 dark:bg-white text-white dark:text-black rounded-tr-sm'
-                    : 'bg-white dark:bg-stone-800 border border-stone-200 dark:border-white/5 text-stone-700 dark:text-stone-300 rounded-tl-sm shadow-sm'
+                    ? 'bg-stone-900 text-white rounded-tr-sm'
+                    : 'bg-white border border-stone-200 text-stone-700 rounded-tl-sm shadow-sm'
                 }`}
               >
                 {msg.text}
@@ -133,7 +133,7 @@ const Chatbot: React.FC = () => {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-white dark:bg-stone-800 border border-stone-200 dark:border-white/5 p-3 rounded-2xl rounded-tl-sm flex gap-1 items-center">
+              <div className="bg-white border border-stone-200 p-3 rounded-2xl rounded-tl-sm flex gap-1 items-center">
                 <span className="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                 <span className="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                 <span className="w-1.5 h-1.5 bg-stone-400 rounded-full animate-bounce"></span>
@@ -144,14 +144,14 @@ const Chatbot: React.FC = () => {
         </div>
 
         {/* Input Area */}
-        <form onSubmit={handleSendMessage} className="p-3 bg-white dark:bg-[#161616] border-t border-stone-200 dark:border-white/10 rounded-b-2xl">
+        <form onSubmit={handleSendMessage} className="p-3 bg-white border-t border-stone-200 rounded-b-2xl">
           <div className="relative flex items-center">
             <input
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Ask me a question..."
-              className="w-full bg-stone-100 dark:bg-stone-900 border-none rounded-full py-3 pl-4 pr-12 text-sm text-stone-900 dark:text-white focus:ring-2 focus:ring-orange-500/50 outline-none transition-all placeholder-stone-400"
+              className="w-full bg-stone-100 border-none rounded-full py-3 pl-4 pr-12 text-sm text-stone-900 focus:ring-2 focus:ring-orange-500/50 outline-none transition-all placeholder-stone-400"
             />
             <button
               type="submit"

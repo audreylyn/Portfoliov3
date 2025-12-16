@@ -138,7 +138,7 @@ const Projects: React.FC = () => {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="py-24 bg-stone-100 dark:bg-[#080808] border-b border-stone-200 dark:border-white/5 transition-colors duration-500 overflow-hidden relative">
+    <section id="projects" className="py-24 bg-stone-100 border-b border-stone-200 transition-colors duration-500 overflow-hidden relative">
       <style>
         {`
           @keyframes modalSlideUp {
@@ -153,30 +153,30 @@ const Projects: React.FC = () => {
       <div className="px-6 md:px-12 max-w-screen-2xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-2 block">Selected Works</span>
-            <h2 className="text-3xl md:text-5xl font-display text-stone-900 dark:text-white">
-              Technical <span className="text-stone-400 dark:text-stone-600">Projects.</span>
+            <span className="text-xs text-orange-600 uppercase tracking-widest mb-2 block">Selected Works</span>
+            <h2 className="text-3xl md:text-5xl font-display text-stone-900">
+              Technical <span className="text-stone-400">Projects.</span>
             </h2>
           </div>
           <div className="flex flex-col items-end gap-4">
-            <p className="max-w-md text-sm text-stone-600 dark:text-stone-400 leading-relaxed text-right">
+            <p className="max-w-md text-sm text-stone-600 leading-relaxed text-right">
               Beyond my internship duties, I actively develop web applications. <br className="hidden md:block"/>Swipe to explore more.
             </p>
             {/* Navigation Buttons */}
             <div className="flex gap-2">
                 <button 
                     onClick={() => scroll('left')}
-                    className="w-12 h-12 border border-stone-300 dark:border-white/10 flex items-center justify-center hover:bg-white dark:hover:bg-white/10 transition-colors rounded-full active:scale-95 group"
+                    className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
                     aria-label="Previous Projects"
                 >
-                    <ArrowLeft className="w-5 h-5 text-stone-600 dark:text-stone-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
+                    <ArrowLeft className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
                 </button>
                 <button 
                     onClick={() => scroll('right')}
-                    className="w-12 h-12 border border-stone-300 dark:border-white/10 flex items-center justify-center hover:bg-white dark:hover:bg-white/10 transition-colors rounded-full active:scale-95 group"
+                    className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
                     aria-label="Next Projects"
                 >
-                    <ArrowRight className="w-5 h-5 text-stone-600 dark:text-stone-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
+                    <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
                 </button>
             </div>
           </div>
@@ -191,39 +191,39 @@ const Projects: React.FC = () => {
             <div 
               key={project.id} 
               onClick={() => setSelectedProject(project)}
-              className="min-w-[85vw] md:min-w-[400px] lg:min-w-[450px] snap-center group flex flex-col bg-stone-50 dark:bg-[#050505] border border-stone-200 dark:border-white/5 hover:border-orange-500/30 dark:hover:border-orange-500/30 transition-all duration-300 shadow-sm dark:shadow-none cursor-pointer"
+              className="min-w-[85vw] md:min-w-[400px] lg:min-w-[450px] snap-center group flex flex-col bg-stone-50 border border-stone-200 hover:border-orange-500/30 transition-all duration-300 shadow-sm cursor-pointer"
             >
               {/* Image Container */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-stone-200 dark:bg-stone-900">
+              <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
                 <img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                  <ExternalLink className="w-4 h-4 text-stone-900 dark:text-white" />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                  <ExternalLink className="w-4 h-4 text-stone-900" />
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-8 flex flex-col flex-grow">
                 <div className="mb-6">
-                  <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-wider font-medium mb-2 block">
+                  <span className="text-xs text-orange-600 uppercase tracking-wider font-medium mb-2 block">
                     {project.category}
                   </span>
-                  <h3 className="text-2xl font-display text-stone-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-2xl font-display text-stone-900 mb-3 group-hover:text-orange-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-3">
+                  <p className="text-sm text-stone-600 leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
                 </div>
 
-                <div className="mt-auto pt-6 border-t border-stone-200 dark:border-white/5">
+                <div className="mt-auto pt-6 border-t border-stone-200">
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t, i) => (
-                      <span key={i} className="px-2 py-1 text-[10px] uppercase tracking-wider border border-stone-200 dark:border-stone-800 text-stone-500 dark:text-stone-500 rounded-sm">
+                      <span key={i} className="px-2 py-1 text-[10px] uppercase tracking-wider border border-stone-200 text-stone-500 rounded-sm">
                         {t}
                       </span>
                     ))}
@@ -239,22 +239,22 @@ const Projects: React.FC = () => {
       {selectedProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div 
-            className="absolute inset-0 bg-stone-200/95 dark:bg-[#050505]/95 backdrop-blur-md transition-opacity" 
+            className="absolute inset-0 bg-stone-200/95 backdrop-blur-md transition-opacity" 
             onClick={() => setSelectedProject(null)}
           ></div>
           
-          <div className="relative w-full max-w-6xl max-h-[90vh] bg-stone-50 dark:bg-[#0c0c0c] border border-stone-200 dark:border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row animate-modal-slide-up rounded-2xl">
+          <div className="relative w-full max-w-6xl max-h-[90vh] bg-stone-50 border border-stone-200 shadow-2xl overflow-hidden flex flex-col md:flex-row animate-modal-slide-up rounded-2xl">
             
             {/* Close Button Mobile */}
             <button 
                 onClick={() => setSelectedProject(null)}
-                className="md:hidden absolute top-4 right-4 z-50 p-2 bg-white/80 dark:bg-black/50 backdrop-blur rounded-full text-stone-500 hover:text-stone-900 dark:hover:text-white transition-colors"
+                className="md:hidden absolute top-4 right-4 z-50 p-2 bg-white/80 backdrop-blur rounded-full text-stone-500 hover:text-stone-900 transition-colors"
             >
                 <X className="w-5 h-5" />
             </button>
 
             {/* Left/Top: Image & Quick Actions */}
-            <div className="w-full md:w-5/12 h-64 md:h-auto relative bg-stone-200 dark:bg-[#111]">
+            <div className="w-full md:w-5/12 h-64 md:h-auto relative bg-stone-200">
                 <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden"></div>
                 
@@ -266,14 +266,14 @@ const Projects: React.FC = () => {
             </div>
 
             {/* Right/Bottom: Content */}
-            <div className="w-full md:w-7/12 flex flex-col overflow-y-auto custom-scrollbar bg-stone-50 dark:bg-[#0c0c0c]">
+            <div className="w-full md:w-7/12 flex flex-col overflow-y-auto custom-scrollbar bg-stone-50">
                 
                 {/* Header Actions Desktop */}
-                <div className="hidden md:flex justify-between items-center p-8 md:p-10 border-b border-stone-200 dark:border-white/5 sticky top-0 bg-stone-50/95 dark:bg-[#0c0c0c]/95 backdrop-blur z-20">
-                    <h2 className="text-3xl font-display text-stone-900 dark:text-white">{selectedProject.title}</h2>
+                <div className="hidden md:flex justify-between items-center p-8 md:p-10 border-b border-stone-200 sticky top-0 bg-stone-50/95 backdrop-blur z-20">
+                    <h2 className="text-3xl font-display text-stone-900">{selectedProject.title}</h2>
                     <button 
                         onClick={() => setSelectedProject(null)}
-                        className="p-2 bg-stone-100 dark:bg-stone-800 rounded-full text-stone-500 hover:text-stone-900 dark:hover:text-white transition-colors"
+                        className="p-2 bg-stone-100 rounded-full text-stone-500 hover:text-stone-900 transition-colors"
                     >
                         <X className="w-5 h-5" />
                     </button>
@@ -284,10 +284,10 @@ const Projects: React.FC = () => {
                     {/* Description Section */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <Layers className="w-4 h-4 text-orange-600 dark:text-orange-500" />
+                            <Layers className="w-4 h-4 text-orange-600" />
                             <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">About the Project</span>
                         </div>
-                        <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-sm md:text-base">
+                        <p className="text-stone-600 leading-relaxed text-sm md:text-base">
                             {selectedProject.fullDescription}
                         </p>
                     </div>
@@ -295,12 +295,12 @@ const Projects: React.FC = () => {
                     {/* Features Grid */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-500" />
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                             <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Key Features</span>
                         </div>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {selectedProject.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start gap-3 text-sm text-stone-600 dark:text-stone-400 p-3 rounded-lg bg-stone-100 dark:bg-stone-900/40 border border-stone-200 dark:border-white/5">
+                                <li key={idx} className="flex items-start gap-3 text-sm text-stone-600 p-3 rounded-lg bg-stone-100 border border-stone-200">
                                     <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 shrink-0"></span>
                                     {feature}
                                 </li>
@@ -311,12 +311,12 @@ const Projects: React.FC = () => {
                     {/* Tech Stack */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <Code2 className="w-4 h-4 text-blue-600 dark:text-blue-500" />
+                            <Code2 className="w-4 h-4 text-blue-600" />
                             <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Technologies Used</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {selectedProject.tech.map((tech, idx) => (
-                                <span key={idx} className="px-3 py-1.5 text-xs font-mono text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-white/10 rounded bg-stone-100 dark:bg-stone-900/50">
+                                <span key={idx} className="px-3 py-1.5 text-xs font-mono text-stone-600 border border-stone-200 rounded bg-stone-100">
                                     {tech}
                                 </span>
                             ))}
@@ -325,12 +325,12 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Footer Actions */}
-                <div className="mt-auto p-6 md:p-10 border-t border-stone-200 dark:border-white/5 bg-stone-100/50 dark:bg-stone-900/20">
+                <div className="mt-auto p-6 md:p-10 border-t border-stone-200 bg-stone-100/50">
                     <div className="flex gap-4">
                         {selectedProject.github && (
                             <a 
                                 href={selectedProject.github}
-                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-stone-900 dark:bg-white text-white dark:text-black rounded-lg font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
+                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-stone-900 text-white rounded-lg font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
                             >
                                 <Github className="w-4 h-4" /> View Code
                             </a>
@@ -338,14 +338,14 @@ const Projects: React.FC = () => {
                         {selectedProject.live ? (
                             <a 
                                 href={selectedProject.live}
-                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-white dark:bg-stone-800 text-stone-900 dark:text-white border border-stone-200 dark:border-white/10 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors"
+                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-white text-stone-900 border border-stone-200 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-stone-50 transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" /> Live Demo
                             </a>
                         ) : (
                              <button 
                                 disabled
-                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-stone-200 dark:bg-stone-900 text-stone-400 dark:text-stone-600 border border-stone-200 dark:border-white/5 rounded-lg font-bold text-sm uppercase tracking-wider cursor-not-allowed"
+                                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-stone-200 text-stone-400 border border-stone-200 rounded-lg font-bold text-sm uppercase tracking-wider cursor-not-allowed"
                             >
                                 <ExternalLink className="w-4 h-4" /> Private / Internal
                             </button>

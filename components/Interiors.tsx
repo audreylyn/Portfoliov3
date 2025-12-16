@@ -38,11 +38,11 @@ const Interiors: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-stone-50 dark:bg-[#050505] border-b border-stone-200 dark:border-white/5 transition-colors duration-500">
+    <section id="about" className="py-24 bg-stone-50 border-b border-stone-200 transition-colors duration-500">
       <div className="px-6 md:px-12 mb-12 flex justify-between items-end">
         <div>
-          <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-2 block transition-colors duration-500">Technical Domain</span>
-          <h2 className="text-3xl md:text-4xl font-display text-stone-900 dark:text-white transition-colors duration-500">Areas of Experience</h2>
+          <span className="text-xs text-orange-600 uppercase tracking-widest mb-2 block transition-colors duration-500">Technical Domain</span>
+          <h2 className="text-3xl md:text-4xl font-display text-stone-900 transition-colors duration-500">Areas of Experience</h2>
         </div>
         <button 
           onClick={handleScrollClick}
@@ -59,14 +59,14 @@ const Interiors: React.FC = () => {
         className="flex overflow-x-auto snap-x snap-mandatory gap-2 px-6 md:px-12 pb-8 hide-scrollbar scroll-smooth"
       >
         {interiors.map((item) => (
-          <div key={item.id} className="min-w-[80vw] md:min-w-[45vw] snap-center group relative aspect-[16/9] overflow-hidden bg-stone-200 dark:bg-stone-900">
+          <div key={item.id} className="min-w-[80vw] md:min-w-[45vw] snap-center group relative aspect-[16/9] overflow-hidden bg-stone-200">
             <img 
               src={item.image} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
               alt="Interior" 
             />
             <div className="absolute bottom-4 left-4 z-10">
-              <span className="px-3 py-1 bg-white/80 dark:bg-black/50 backdrop-blur text-stone-900 dark:text-white text-[10px] uppercase tracking-wider border border-stone-200 dark:border-white/10">
+              <span className="px-3 py-1 bg-white/80 backdrop-blur text-stone-900 text-[10px] uppercase tracking-wider border border-stone-200">
                 {item.label}
               </span>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from './components/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
@@ -12,7 +13,7 @@ import Ventures from './components/Ventures';
 import BentoGrid from './components/BentoGrid';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
-import { ThemeProvider } from './components/ThemeContext';
+import VideoIntro from './components/VideoIntro';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <div className="w-full relative">
         <Navbar />
         <Hero />
+        <VideoIntro />
         
         {/* Capability Section: Skills & Domains */}
         <Philosophy />

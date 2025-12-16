@@ -32,13 +32,13 @@ const projects: Project[] = [
     id: '01',
     name: 'Internship Host',
     location: 'Valenzuela City',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop',
+    image: 'images/Journey/it_office.png',
     type: 'Company Profile',
     valuation: 'IT Office',
     description: 'Pamantasan ng Lungsod ng Valenzuela (PLV) IT Office located at 8 Tongco, Maysan, Valenzuela City.',
     details: 'The IT Office at PLV serves as the central hub for the university\'s technical infrastructure. Located at 8 Tongco, Maysan, Valenzuela City, 1442 Metro Manila, it handles network administration, hardware maintenance, and software support for the institution.',
     features: ['PLV Maysan', 'Tongco St.', 'Tech Support', 'Education Sector'],
-    gallery: ['images/host1.jpg', 'images/host2.jpg', 'images/host3.jpg', 'images/host4.jpg'],
+    gallery: ['images/Journey/team1.jpg', 'images/Journey/team2.jpg', 'images/Journey/team3.jpg', 'images/Journey/team1.jpg'],
     theme: {
         light: { mainBg: '#f5f5f4', subBg: '#fafaf9', text: '#57534e', title: '#1c1917', border: '#e7e5e4' }, // Stone
         dark: { mainBg: '#1c1917', subBg: '#0c0a09', text: '#a8a29e', title: '#fafaf9', border: 'rgba(255,255,255,0.05)' }
@@ -179,7 +179,7 @@ const Portfolio: React.FC = () => {
         
         {/* Sticky Sidebar */}
         <div className="lg:w-1/3 lg:h-screen lg:sticky lg:top-0 p-6 md:p-12 flex flex-col justify-center border-r border-[var(--theme-border)] bg-[var(--theme-sub-bg)] z-10 transition-colors duration-700">
-          <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-6 block transition-colors duration-500">The Journey</span>
+          <span className="text-xs text-orange-600 uppercase tracking-widest mb-6 block transition-colors duration-500">The Journey</span>
           <h2 className="text-3xl md:text-5xl font-display text-[var(--theme-title)] mb-6 leading-tight transition-colors duration-700">Internship<br />Information.</h2>
           <p className="text-[var(--theme-text)] text-sm leading-relaxed mb-8 max-w-sm transition-colors duration-700">
             A detailed overview of my internship at the PLV IT Office. Here you will find information about the host company, supervision, schedule, and the scope of my duties and outputs.
@@ -214,16 +214,16 @@ const Portfolio: React.FC = () => {
                   <h3 className="text-3xl md:text-5xl font-display text-[var(--theme-title)] group-hover:opacity-80 transition-colors">{project.id}. {project.name}</h3>
                   <span className="text-xs font-mono text-[var(--theme-text)] opacity-60">{project.location}</span>
                 </div>
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-stone-200 dark:bg-stone-900 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer" onClick={() => setSelectedProject(project)}>
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-stone-200 mb-8 grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer" onClick={() => setSelectedProject(project)}>
                   <img 
                     src={project.image} 
                     className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000" 
                     alt={project.name} 
                   />
-                  <div className="reveal-info absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white/90 dark:from-black/90 to-transparent opacity-0 translate-y-4 transition-all duration-500">
+                  <div className="reveal-info absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white/90 to-transparent opacity-0 translate-y-4 transition-all duration-500">
                     <div className="flex justify-between items-end">
-                      <p className="text-stone-900 dark:text-white text-xs tracking-widest uppercase font-semibold">{project.type}</p>
-                      <p className="text-stone-700 dark:text-stone-300 font-mono text-xs">{project.valuation}</p>
+                      <p className="text-stone-900 text-xs tracking-widest uppercase font-semibold">{project.type}</p>
+                      <p className="text-stone-700 font-mono text-xs">{project.valuation}</p>
                     </div>
                   </div>
                 </div>
@@ -246,15 +246,15 @@ const Portfolio: React.FC = () => {
       {selectedProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4">
           <div 
-            className="absolute inset-0 bg-stone-200/90 dark:bg-black/90 backdrop-blur-sm transition-opacity duration-300"
+            className="absolute inset-0 bg-stone-200/90 backdrop-blur-sm transition-opacity duration-300"
             onClick={() => setSelectedProject(null)}
           ></div>
           
-          <div className="relative w-full max-w-6xl h-full md:h-[90vh] bg-stone-50 dark:bg-[#0c0c0c] border-x md:border border-stone-200 dark:border-white/10 overflow-hidden flex flex-col shadow-2xl animate-modal-enter transition-colors duration-300">
+          <div className="relative w-full max-w-6xl h-full md:h-[90vh] bg-stone-50 border-x md:border border-stone-200 overflow-hidden flex flex-col shadow-2xl animate-modal-enter transition-colors duration-300">
             {/* Close Button */}
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/50 dark:bg-black/50 backdrop-blur text-stone-900 dark:text-white flex items-center justify-center hover:bg-stone-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all border border-stone-200 dark:border-white/10"
+              className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/50 backdrop-blur text-stone-900 flex items-center justify-center hover:bg-stone-900 hover:text-white transition-all border border-stone-200"
             >
               <X className="w-5 h-5" />
             </button>
@@ -264,13 +264,13 @@ const Portfolio: React.FC = () => {
               {/* Hero Image */}
               <div className="w-full h-[40vh] md:h-[50vh] relative">
                 <img src={selectedProject.image} className="w-full h-full object-cover" alt={selectedProject.name} />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-50 dark:from-[#0c0c0c] via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-50 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6 md:p-12 w-full">
-                  <h2 className="text-4xl md:text-7xl font-display text-stone-900 dark:text-white mb-2 tracking-tight">{selectedProject.name}</h2>
+                  <h2 className="text-4xl md:text-7xl font-display text-stone-900 mb-2 tracking-tight">{selectedProject.name}</h2>
                   <div className="flex items-center gap-4">
-                    <span className="font-mono text-stone-600 dark:text-stone-400 text-xs md:text-sm">{selectedProject.location}</span>
-                    <span className="w-1 h-1 bg-orange-600 dark:bg-orange-500 rounded-full"></span>
-                    <span className="font-mono text-orange-600 dark:text-orange-500 text-xs md:text-sm uppercase tracking-wider">Info</span>
+                    <span className="font-mono text-stone-600 text-xs md:text-sm">{selectedProject.location}</span>
+                    <span className="w-1 h-1 bg-orange-600 rounded-full"></span>
+                    <span className="font-mono text-orange-600 text-xs md:text-sm uppercase tracking-wider">Info</span>
                   </div>
                 </div>
               </div>
@@ -280,17 +280,17 @@ const Portfolio: React.FC = () => {
                   {/* Left Column: Description & Gallery */}
                   <div className="lg:col-span-2 space-y-12">
                     <div className="space-y-6">
-                      <h3 className="text-xl font-display text-stone-900 dark:text-white">Detailed Information</h3>
-                      <p className="text-stone-600 dark:text-stone-400 leading-loose text-sm md:text-base font-light">
+                      <h3 className="text-xl font-display text-stone-900">Detailed Information</h3>
+                      <p className="text-stone-600 leading-loose text-sm md:text-base font-light">
                         {selectedProject.details}
                       </p>
                     </div>
                     
                     <div className="space-y-6">
-                      <h3 className="text-xl font-display text-stone-900 dark:text-white">Visual Context</h3>
+                      <h3 className="text-xl font-display text-stone-900">Visual Context</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {selectedProject.gallery.map((img, idx) => (
-                          <div key={idx} className="aspect-[4/3] bg-stone-200 dark:bg-stone-900 overflow-hidden group/img">
+                          <div key={idx} className="aspect-[4/3] bg-stone-200 overflow-hidden group/img">
                             <img src={img} className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700 scale-125 group-hover/img:scale-100" alt={`${selectedProject.name} Detail ${idx + 1}`} />
                           </div>
                         ))}
@@ -300,27 +300,27 @@ const Portfolio: React.FC = () => {
 
                   {/* Right Column: Specs & Features */}
                   <div className="space-y-8">
-                    <div className="bg-stone-100 dark:bg-stone-900/20 border border-stone-200 dark:border-white/5 p-8 space-y-6">
+                    <div className="bg-stone-100 border border-stone-200 p-8 space-y-6">
                        <div>
                           <span className="text-xs text-stone-500 uppercase tracking-widest block mb-1">Category</span>
-                          <span className="text-stone-800 dark:text-stone-200 text-lg font-display">{selectedProject.type}</span>
+                          <span className="text-stone-800 text-lg font-display">{selectedProject.type}</span>
                        </div>
                        <div>
                           <span className="text-xs text-stone-500 uppercase tracking-widest block mb-1">Key Detail</span>
-                          <span className="text-stone-800 dark:text-stone-200 text-lg font-mono">{selectedProject.valuation}</span>
+                          <span className="text-stone-800 text-lg font-mono">{selectedProject.valuation}</span>
                        </div>
                        <div>
                           <span className="text-xs text-stone-500 uppercase tracking-widest block mb-1">Status</span>
-                          <span className="text-stone-800 dark:text-stone-200 text-lg font-mono">Completed</span>
+                          <span className="text-stone-800 text-lg font-mono">Completed</span>
                        </div>
                     </div>
 
                     <div>
-                      <span className="text-orange-600 dark:text-orange-500 text-xs uppercase tracking-widest mb-6 block">Highlights</span>
+                      <span className="text-orange-600 text-xs uppercase tracking-widest mb-6 block">Highlights</span>
                       <ul className="space-y-4">
                         {selectedProject.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300">
-                            <span className="w-1.5 h-1.5 bg-stone-400 dark:bg-stone-600 rounded-full"></span>
+                          <li key={idx} className="flex items-center gap-3 text-sm text-stone-700">
+                            <span className="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
                             {feature}
                           </li>
                         ))}

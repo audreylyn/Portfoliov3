@@ -73,11 +73,11 @@ const Philosophy: React.FC = () => {
 
   const getIntensityClass = (level: number) => {
     switch(level) {
-      case 1: return 'bg-emerald-200 dark:bg-emerald-900/40';
-      case 2: return 'bg-emerald-300 dark:bg-emerald-800/60';
-      case 3: return 'bg-emerald-400 dark:bg-emerald-600/80';
-      case 4: return 'bg-emerald-500 dark:bg-emerald-500';
-      default: return 'bg-stone-200 dark:bg-stone-800/50'; // level 0
+      case 1: return 'bg-emerald-200';
+      case 2: return 'bg-emerald-300';
+      case 3: return 'bg-emerald-400';
+      case 4: return 'bg-emerald-500';
+      default: return 'bg-stone-200'; // level 0
     }
   };
 
@@ -109,14 +109,14 @@ const Philosophy: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-6 md:px-12 bg-stone-50 dark:bg-[#050505] border-b border-stone-200 dark:border-white/5 transition-colors duration-500">
+    <section id="about" className="py-24 px-6 md:px-12 bg-stone-50 border-b border-stone-200 transition-colors duration-500">
       <div className="max-w-screen-2xl mx-auto">
         
         {/* Header Section - Full Width to remove empty space */}
         <div className="max-w-4xl mb-16">
-          <span className="text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-4 block">About Me</span>
-          <h2 className="text-3xl md:text-5xl font-display text-stone-900 dark:text-white leading-tight">
-            <span className="underline--magical">Skills Summary</span> <span className="text-stone-400 dark:text-stone-600">&</span> <br/>
+          <span className="text-xs text-orange-600 uppercase tracking-widest mb-4 block">About Me</span>
+          <h2 className="text-3xl md:text-5xl font-display text-stone-900 leading-tight">
+            <span className="underline--magical">Skills Summary</span> <span className="text-stone-400">&</span> <br/>
             Professional Attributes
           </h2>
         </div>
@@ -124,19 +124,19 @@ const Philosophy: React.FC = () => {
         {/* Content Grid - 2 Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {/* Soft Skills */}
-          <div className="bg-white dark:bg-[#0a0a0a] border border-stone-200 dark:border-white/5 p-8 md:p-10 rounded-2xl hover:border-orange-500/30 transition-colors shadow-sm dark:shadow-none">
+          <div className="bg-white border border-stone-200 p-8 md:p-10 rounded-2xl hover:border-orange-500/30 transition-colors shadow-sm">
             <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-500 rounded-full">
+                <div className="p-3 bg-orange-100 text-orange-600 rounded-full">
                     <Brain className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-display text-stone-900 dark:text-white">Professional Conduct</h3>
+                <h3 className="text-xl font-display text-stone-900">Professional Conduct</h3>
             </div>
-            <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-sm md:text-base mb-8">
+            <p className="text-stone-600 leading-relaxed text-sm md:text-base mb-8">
               My professional conduct is defined by strong problem-solving and critical thinking abilities. I excel in communication and collaboration within team settings, ensuring clarity in documentation and reporting. Effective time management allows me to handle multiple technical tasks efficiently.
             </p>
             <div className="flex flex-wrap gap-3">
                 {softSkills.map(skill => (
-                    <span key={skill} className="px-3 py-1.5 bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-500/20 text-orange-700 dark:text-orange-400 text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-orange-100 dark:hover:bg-orange-900/40 transition-colors cursor-default">
+                    <span key={skill} className="px-3 py-1.5 bg-orange-50 border border-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-orange-100 transition-colors cursor-default">
                         {skill}
                     </span>
                 ))}
@@ -144,19 +144,19 @@ const Philosophy: React.FC = () => {
           </div>
 
           {/* Technical Skills */}
-          <div className="bg-white dark:bg-[#0a0a0a] border border-stone-200 dark:border-white/5 p-8 md:p-10 rounded-2xl hover:border-emerald-500/30 transition-colors shadow-sm dark:shadow-none">
+          <div className="bg-white border border-stone-200 p-8 md:p-10 rounded-2xl hover:border-emerald-500/30 transition-colors shadow-sm">
             <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-500 rounded-full">
+                <div className="p-3 bg-emerald-100 text-emerald-600 rounded-full">
                     <Terminal className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-display text-stone-900 dark:text-white">Technical Expertise</h3>
+                <h3 className="text-xl font-display text-stone-900">Technical Expertise</h3>
             </div>
-            <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-sm md:text-base mb-8">
+            <p className="text-stone-600 leading-relaxed text-sm md:text-base mb-8">
                 I possess hands-on experience in hardware troubleshooting, software installation, and system maintenance. My expertise extends to web technologies and database management.
             </p>
             <div className="flex flex-wrap gap-3">
                 {skills.map(skill => (
-                    <span key={skill} className="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-colors cursor-default">
+                    <span key={skill} className="px-3 py-1.5 bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold uppercase tracking-wider rounded-md hover:bg-emerald-100 transition-colors cursor-default">
                         {skill}
                     </span>
                 ))}
@@ -165,18 +165,18 @@ const Philosophy: React.FC = () => {
         </div>
 
         {/* GitHub & Stats Section - Unified Container */}
-        <div className="border-t border-stone-200 dark:border-white/10 pt-16">
+        <div className="border-t border-stone-200 pt-16">
            <div className="grid grid-cols-1 xl:grid-cols-4 gap-12">
               
               {/* GitHub Graph - Spans 3 columns */}
               <div className="xl:col-span-3">
                   <div className="flex items-center justify-between mb-8">
                      <a href="https://github.com/audreylyn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group hover:opacity-70 transition-opacity">
-                        <Github className="w-5 h-5 text-stone-900 dark:text-white" />
-                        <span className="text-sm font-bold uppercase tracking-wider text-stone-900 dark:text-white">GitHub Contributions</span>
+                        <Github className="w-5 h-5 text-stone-900" />
+                        <span className="text-sm font-bold uppercase tracking-wider text-stone-900">GitHub Contributions</span>
                      </a>
                      <div className="text-right">
-                        <span className="font-display font-bold text-2xl text-stone-900 dark:text-white block">{totalContributions}</span>
+                        <span className="font-display font-bold text-2xl text-stone-900 block">{totalContributions}</span>
                         <span className="text-[10px] text-stone-500 uppercase">Contributions (Last Year)</span>
                      </div>
                   </div>
@@ -200,17 +200,17 @@ const Philosophy: React.FC = () => {
               </div>
 
               {/* Stats - Vertical Column */}
-              <div className="xl:col-span-1 flex flex-row xl:flex-col justify-between gap-8 border-t xl:border-t-0 xl:border-l border-stone-200 dark:border-white/10 pt-8 xl:pt-0 xl:pl-12">
+              <div className="xl:col-span-1 flex flex-row xl:flex-col justify-between gap-8 border-t xl:border-t-0 xl:border-l border-stone-200 pt-8 xl:pt-0 xl:pl-12">
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">{githubStats.public_repos}</span>
+                    <span className="block text-4xl font-display text-stone-900 mb-1">{githubStats.public_repos}</span>
                     <span className="text-xs text-stone-500 uppercase tracking-widest">Public Repos</span>
                   </div>
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">8</span>
+                    <span className="block text-4xl font-display text-stone-900 mb-1">8</span>
                     <span className="text-xs text-stone-500 uppercase tracking-widest">Private Repos</span>
                   </div>
                   <div>
-                    <span className="block text-4xl font-display text-stone-900 dark:text-white mb-1">{githubStats.followers}</span>
+                    <span className="block text-4xl font-display text-stone-900 mb-1">{githubStats.followers}</span>
                     <span className="text-xs text-stone-500 uppercase tracking-widest">Followers</span>
                   </div>
               </div>

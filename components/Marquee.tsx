@@ -17,27 +17,27 @@ const Marquee: React.FC = () => {
     // General Skills (Lucide Icons)
     { 
       name: "Hardware", 
-      icon: <Wrench className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Wrench className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     { 
       name: "Installation", 
-      icon: <Download className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Download className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     { 
       name: "OS Config", 
-      icon: <Monitor className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Monitor className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     { 
       name: "Maintenance", 
-      icon: <Settings className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Settings className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     { 
       name: "Networking", 
-      icon: <Network className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Network className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     { 
       name: "Setup", 
-      icon: <Cpu className="w-5 h-5 md:w-6 md:h-6 text-stone-500 dark:text-stone-400 opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Cpu className="w-5 h-5 md:w-6 md:h-6 text-stone-500 opacity-70 group-hover:opacity-100 transition-opacity" />,
     },
     
     // Tech Stack (Brand Icons - Monochromatic)
@@ -57,23 +57,23 @@ const Marquee: React.FC = () => {
   const displayedItems = [...items, ...items, ...items];
 
   return (
-    <div className="relative z-20 py-8 bg-stone-100 dark:bg-[#080808] border-y border-stone-200 dark:border-white/5 overflow-hidden transition-colors duration-500">
+    <div className="relative z-20 py-8 bg-stone-100 border-y border-stone-200 overflow-hidden transition-colors duration-500">
       
       {/* Gradient Masks */}
-      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-stone-100 dark:from-[#080808] to-transparent z-10"></div>
-      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-stone-100 dark:from-[#080808] to-transparent z-10"></div>
+      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-stone-100 to-transparent z-10"></div>
+      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-stone-100 to-transparent z-10"></div>
 
       <div className="whitespace-nowrap flex items-center animate-marquee hover:[animation-play-state:paused] gap-3">
         {displayedItems.map((item, index) => (
           <div 
             key={index} 
-            className="group flex items-center gap-3 px-5 py-2.5 bg-white dark:bg-[#111] border border-stone-200 dark:border-white/5 rounded-full shadow-sm dark:shadow-none hover:border-stone-300 dark:hover:border-stone-700 transition-all duration-300 cursor-default select-none"
+            className="group flex items-center gap-3 px-5 py-2.5 bg-white border border-stone-200 rounded-full shadow-sm hover:border-stone-300 transition-all duration-300 cursor-default select-none"
           >
             {/* Icons are forced to grayscale for consistency */}
             <div className="flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
                 {item.icon}
             </div>
-            <span className="font-display font-medium text-sm text-stone-600 dark:text-stone-300 group-hover:text-stone-900 dark:group-hover:text-white transition-colors">
+            <span className="font-display font-medium text-sm text-stone-600 group-hover:text-stone-900 transition-colors">
               {item.name}
             </span>
           </div>
