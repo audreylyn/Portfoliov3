@@ -6,41 +6,61 @@ const certificates = [
     id: 1,
     title: "Certificate of Completion - OJT",
     issuer: "Pamantasan ng Lungsod ng Valenzuela - IT Office",
-    date: "2024",
+    date: "2025",
     type: "Internship",
-    image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1600&auto=format&fit=crop",
-    link: "#",
+    status: "completed",
+    banner: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
+    image: "images/certificates/completion.jpg",
+    link: "images/certificates/completion.pdf",
     description: "Successfully completed 486 hours of intensive internship training, specializing in hardware diagnostics, network administration, and technical support."
   },
   {
     id: 2,
-    title: "The Complete Web Developer Course 3.0",
-    issuer: "Udemy",
+    title: "The Complete Full-Stack Web Development Bootcamp",
+    issuer: "Angela Yu (Udemy)",
     date: "2023",
     type: "Course",
-    image: "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1600&auto=format&fit=crop",
-    link: "#",
-    description: "Comprehensive bootcamp covering full-stack development technologies including HTML5, CSS3, JS, PHP, and MySQL."
+    status: "completed",
+    banner: "https://img-c.udemycdn.com/course/240x135/1565838_e54e_18.jpg",
+    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-4b83fb7e-97a5-43a3-88f3-feaea95c77ea.jpg",
+    link: "https://www.udemy.com/certificate/UC-4b83fb7e-97a5-43a3-88f3-feaea95c77ea/",
+    description: "Comprehensive bootcamp covering full-stack development technologies including HTML5, CSS3, JS, React, Postgres and many more."
   },
   {
     id: 3,
-    title: "React - The Complete Guide",
-    issuer: "Udemy",
-    date: "2023",
+    title: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    issuer: "Jonas Schmedtmann (Udemy)",
+    date: "2025",
     type: "Course",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1600&auto=format&fit=crop",
-    link: "#",
-    description: "Deep dive into React.js ecosystem, hooks, Redux, and Next.js, building real-world single-page applications."
+    status: "completed",
+    banner: "https://img-c.udemycdn.com/course/240x135/851712_fc61_6.jpg",
+    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-7555fff7-d481-4893-8ccd-79fa3ab3e579.jpg",
+    link: "https://www.udemy.com/certificate/UC-7555fff7-d481-4893-8ccd-79fa3ab3e579/",
+    description: "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!"
   },
   {
     id: 4,
-    title: "PHP & MySQL for Beginners",
-    issuer: "Udemy",
-    date: "2022",
+    title: "The Ultimate React Course 2025: React, Next.js, Redux & More",
+    issuer: "Jonas Schmedtmann (Udemy)",
+    date: "Ongoing",
     type: "Course",
-    image: "https://images.unsplash.com/photo-1599507593499-a3f7d7d97663?q=80&w=1600&auto=format&fit=crop",
+    status: "ongoing",
+    banner: "https://img-c.udemycdn.com/course/240x135/4471614_361e_8.jpg",
+    image: "https://img-c.udemycdn.com/course/240x135/4471614_361e_8.jpg",
     link: "#",
-    description: "Foundational backend development course focusing on database design, secure authentication, and CRUD operations."
+    description: "Master modern React from beginner to advanced! Next.js, Context API, React Query, Redux, Tailwind, advanced patterns"
+  },
+  {
+    id: 5,
+    title: "n8n - AI Agents, AI Automations & AI Voice Agents (No-code!)",
+    issuer: "Krystian Wojtarowicz and AdaptifyAI OU (Udemy)",
+    date: "Ongoing",
+    type: "Course",
+    status: "ongoing",
+    banner: "https://img-c.udemycdn.com/course/240x135/6563609_8f41_2.jpg",
+    image: "https://img-c.udemycdn.com/course/240x135/6563609_8f41_2.jpg",
+    link: "#",
+    description: "90+ Ready-to-Use n8n Templates to Build AI Agents & Automate Workflows with OpenAI, Retell, MCP, RAG | Launch AI Agency"
   }
 ];
 
@@ -160,7 +180,7 @@ const Certificates: React.FC = () => {
                         {/* Image & Title Header */}
                         <div className="flex items-start gap-4 mb-4">
                              <div className="w-12 h-12 shrink-0 rounded-lg overflow-hidden bg-stone-100 border border-stone-100">
-                                <img src={cert.image} alt={cert.issuer} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                <img src={cert.banner} alt={cert.issuer} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                              </div>
                              <div>
                                 <h3 className="font-display text-lg text-stone-900 leading-tight mb-1 group-hover:text-orange-600 transition-colors">
@@ -175,9 +195,18 @@ const Certificates: React.FC = () => {
                         </p>
 
                         <div className="flex items-center justify-between pt-4 border-t border-stone-100 mt-auto">
-                            <div className="flex items-center gap-2 text-xs text-emerald-600 font-medium">
-                                <CheckCircle2 className="w-3 h-3" />
-                                <span>Verified</span>
+                            <div className={`flex items-center gap-2 text-xs font-medium ${cert.status === 'ongoing' ? 'text-orange-600' : 'text-emerald-600'}`}>
+                                {cert.status === 'ongoing' ? (
+                                    <>
+                                        <Calendar className="w-3 h-3" />
+                                        <span>Ongoing</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <CheckCircle2 className="w-3 h-3" />
+                                        <span>Verified</span>
+                                    </>
+                                )}
                             </div>
                             <button 
                                 onClick={(e) => {
@@ -186,7 +215,7 @@ const Certificates: React.FC = () => {
                                 }} 
                                 className="flex items-center gap-2 text-xs font-medium text-stone-400 hover:text-stone-900 transition-colors group/link"
                             >
-                                <span>View Certificate</span>
+                                <span>{cert.status === 'ongoing' ? 'View Details' : 'View Certificate'}</span>
                                 <ExternalLink className="w-3 h-3 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
                             </button>
                         </div>
@@ -217,16 +246,26 @@ const Certificates: React.FC = () => {
                     <div className="w-full md:w-3/5 bg-stone-200 relative flex items-center justify-center p-6 md:p-16 overflow-hidden group min-h-[200px]">
                         {/* Background blurred image for ambiance */}
                         <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
-                            <img src={selectedCert.image} className="w-full h-full object-cover blur-3xl scale-150" alt="" />
+                            <img src={selectedCert.banner} className="w-full h-full object-cover blur-3xl scale-150" alt="" />
                         </div>
                         
                         {/* The "Paper" Certificate */}
                         <div className="relative w-full aspect-[4/3] bg-white shadow-2xl rounded-sm overflow-hidden border-[8px] md:border-[12px] border-white transform transition-transform duration-500 group-hover:scale-[1.02]">
-                            <img src={selectedCert.image} className="w-full h-full object-cover" alt={selectedCert.title} />
+                            <img src={selectedCert.image} className={`w-full h-full object-cover ${selectedCert.status === 'ongoing' ? 'opacity-40 grayscale' : ''}`} alt={selectedCert.title} />
                             
+                            {selectedCert.status === 'ongoing' && (
+                                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                                    <div className="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mb-4 shadow-inner">
+                                        <Calendar className="w-8 h-8 text-stone-400" />
+                                    </div>
+                                    <p className="text-stone-900 font-display text-xl font-bold mb-1">Ongoing Course</p>
+                                    <p className="text-stone-500 text-sm">Certificate will be available upon completion.</p>
+                                </div>
+                            )}
+
                             {/* Optional overlay badge */}
                             <div className="absolute top-0 right-0 p-2 md:p-4">
-                                <div className="w-8 h-8 md:w-12 md:h-12 bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg">
+                                <div className={`w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg ${selectedCert.status === 'ongoing' ? 'bg-stone-400' : 'bg-orange-600'} text-white`}>
                                     <Award className="w-4 h-4 md:w-6 md:h-6" />
                                 </div>
                             </div>
@@ -244,9 +283,18 @@ const Certificates: React.FC = () => {
                                 }`}>
                                     {selectedCert.type}
                                 </span>
-                                <div className="flex items-center gap-1 text-emerald-600 text-xs font-bold uppercase tracking-wider">
-                                    <CheckCircle2 className="w-3 h-3" />
-                                    <span>Verified</span>
+                                <div className={`flex items-center gap-1 text-xs font-bold uppercase tracking-wider ${selectedCert.status === 'ongoing' ? 'text-orange-600' : 'text-emerald-600'}`}>
+                                    {selectedCert.status === 'ongoing' ? (
+                                        <>
+                                            <Calendar className="w-3 h-3" />
+                                            <span>Ongoing</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <CheckCircle2 className="w-3 h-3" />
+                                            <span>Verified</span>
+                                        </>
+                                    )}
                                 </div>
                             </div>
 
@@ -279,12 +327,17 @@ const Certificates: React.FC = () => {
                         </div>
 
                         <div className="mt-8 flex flex-col gap-3">
-                            <button className="w-full py-4 bg-stone-900 text-white rounded-lg font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                                <Download className="w-4 h-4" /> Download Certificate
-                            </button>
-                            <button className="w-full py-4 bg-transparent border border-stone-200 text-stone-600 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-stone-50 transition-colors flex items-center justify-center gap-2">
-                                <Share2 className="w-4 h-4" /> Share Credential
-                            </button>
+                            {selectedCert.status !== 'ongoing' && (
+                                <a 
+                                    href={selectedCert.link !== "#" ? selectedCert.link : selectedCert.image}
+                                    download
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full py-4 bg-stone-900 text-white rounded-lg font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                                >
+                                    <Download className="w-4 h-4" /> Download Certificate
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

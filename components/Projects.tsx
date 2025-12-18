@@ -4,111 +4,153 @@ import { Github, ExternalLink, ArrowLeft, ArrowRight, X, CheckCircle2, Layers, C
 const projects = [
   {
     id: 1,
-    title: "Student Information System",
+    title: "MCiSmartSpace",
     category: "Full Stack Development",
-    description: "A comprehensive portal for PLV students to view grades, schedules, and enrollment status. Built with robust role-based access control.",
-    fullDescription: "Designed to streamline the academic experience, this Student Information System serves as a centralized hub for data management within PLV. It replaces manual processes with a secure, digital interface allowing real-time access to academic records, significantly reducing administrative overhead and improving data accuracy.",
+    description: "Meycauayan College's automated room management and equipment tracking system with multi-role support.",
+    fullDescription: "MCiSmartSpace is a comprehensive room management and equipment tracking system developed for Meycauayan College. It streamlines the process of reserving academic spaces and tracking institutional assets. The system features role-based access for Students, Teachers, Department Admins, and the Registrar, ensuring secure and efficient data management across the institution.",
     features: [
-      "Role-Based Access Control (RBAC)",
-      "Real-time Grade Computation",
-      "Class Schedule Visualization",
-      "Enrollment History Tracking",
-      "Secure Student Authentication"
+      "Multi-role Authentication (Student, Teacher, Admin, Registrar)",
+      "Automated Room Reservation & Approval Workflow",
+      "Equipment Inventory & Maintenance Tracking",
+      "QR Code Integration for Equipment Reporting",
+      "Comprehensive Reporting & Analytics Engine"
     ],
-    tech: ["Laravel", "MySQL", "Bootstrap", "PHP"],
-    image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: "#"
+    tech: ["PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
+    github: "https://github.com/audreylyn/mcmod41",
+    live: "https://app.mcismartspace.com/"
   },
   {
     id: 2,
-    title: "OJT Portfolio v1",
-    category: "Frontend Design",
-    description: "The initial iteration of my internship portfolio focusing on accessible design and dark mode implementation.",
-    fullDescription: "This project represents the first major milestone in my journey as a frontend developer. It focuses on clean typography, accessibility, and providing a seamless experience across devices while showcasing my internship achievements and technical growth.",
+    title: "WebGen AI",
+    category: "AI & Web Generation",
+    description: "A powerful React-based website generator with AI-assisted content creation using Google Gemini.",
+    fullDescription: "WebGen AI (LikhaSiteWorks) is an innovative platform that allows users to generate complete, responsive websites in minutes. By leveraging the Google Gemini API, it automatically creates compelling copy, selects appropriate themes, and configures essential sections based on simple user prompts. It includes a robust admin dashboard for managing multiple generated sites.",
     features: [
-      "Responsive Mobile-First Design",
-      "Dark/Light Mode Toggle",
-      "Smooth Scroll Animations",
-      "Component-Based Architecture",
-      "Accessible Navigation"
+      "AI-Powered Content Generation (Google Gemini)",
+      "Dynamic Theme & Color Palette Generation",
+      "Component-Based Website Builder UI",
+      "Integrated Contact Forms & Chat Support",
+      "Supabase Backend for Data & Storage"
     ],
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    image: "https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: "#"
+    tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Google Gemini API"],
+    github: "https://github.com/audreylyn/webgen",
+    live: "https://likhasiteworks.dev"
   },
   {
     id: 3,
-    title: "Inventory Management",
-    category: "Database Management",
-    description: "An internal tool developed to track hardware assets within the IT Office, streamlining the audit process.",
-    fullDescription: "Built to address the challenges of asset tracking in a busy IT office, this application provides granular control over hardware inventory. It facilitates easy auditing, ensures accountability for all university technical assets, and generates comprehensive status reports.",
+    title: "MC RMIS",
+    category: "Web Application",
+    description: "An event-driven Room Management Information System designed to streamline academic space requisitions.",
+    fullDescription: "The Room Management Information System (RMIS) is an event-driven web application developed to modernize the room requisition process at Meycauayan College. Built with an MVC architecture, it provides a seamless interface for students to submit requests and for administrators to approve and monitor them through interactive dashboards and data visualizations.",
     features: [
-      "Barcode/Asset Tag Support",
-      "Automated Audit Reports",
-      "Equipment Status Tracking",
-      "User Activity Logging",
-      "Check-in/Check-out System"
+      "MVC Architectural Pattern Implementation",
+      "Interactive Admin Dashboard with Chart.js",
+      "Real-time Form Validation & Feedback",
+      "Responsive Design for All Devices",
+      "Advanced Data Filtering & Pagination"
     ],
-    tech: ["VB.NET", "MSSQL", "Crystal Reports"],
-    image: "https://images.unsplash.com/photo-1586769852044-692d6e3703f0?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: null
+    tech: ["PHP", "MySQL", "JavaScript", "Tailwind CSS", "Chart.js"],
+    github: "https://github.com/audreylyn/rmis",
+    live: "http://rmis.ct.ws/"
   },
   {
     id: 4,
-    title: "E-Commerce Dashboard",
-    category: "Web Application",
-    description: "A modern admin dashboard for managing products, orders, and analytics with real-time data visualization and export capabilities.",
-    fullDescription: "A high-performance dashboard designed for modern e-commerce needs. It aggregates critical business metrics into an intuitive interface, allowing administrators to make data-driven decisions instantly through interactive charts and real-time order feeds.",
+    title: "NightFit™",
+    category: "E-commerce Landing Page",
+    description: "A premium, science-backed landing page for dietary supplements with dark mode and Messenger integration.",
+    fullDescription: "NightFit™ is a high-conversion landing page designed for a health supplement brand. It features a futuristic dark-neon aesthetic, interactive testimonial sliders, and a custom order modal integrated with Facebook Messenger. The project emphasizes performance and user experience, utilizing Vite for lightning-fast load times and a mobile-first responsive design.",
     features: [
-      "Interactive Data Visualization",
-      "Product & Stock Management",
-      "Order Processing Workflow",
-      "Sales Performance Analytics",
-      "Data Export (CSV/PDF)"
+      "Futuristic Dark/Light Mode with Neon Accents",
+      "Interactive Testimonials & Product Sliders",
+      "Facebook Messenger Order Integration",
+      "Dynamic Pricing & Quantity Selection Modal",
+      "SEO Optimized with High Performance Scores"
     ],
-    tech: ["React", "Node.js", "Chart.js", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: "#"
+    tech: ["React", "Vite", "Tailwind CSS", "Lucide React"],
+    github: "https://github.com/audreylyn/nightfit",
+    live: "https://nightfit.likhasiteworks.studio/"
   },
   {
     id: 5,
-    title: "Task Master",
-    category: "Productivity Tool",
-    description: "A drag-and-drop task management application inspired by Kanban boards for improved personal productivity and team collaboration.",
-    fullDescription: "Inspired by Trello and Jira, Task Master simplifies project management through a visual Kanban board. It enables teams to organize tasks efficiently, tracking progress from conception to completion with a focus on usability and speed.",
+    title: "Likha Site Works",
+    category: "Agency Portfolio",
+    description: "A professional agency website featuring interactive SVG animations and a multi-step quote system.",
+    fullDescription: "Likha Site Works is a comprehensive agency portfolio that showcases web design and development services. It features sophisticated SVG animations powered by SnapSVG, a multi-step project inquiry system, and a dynamic project gallery. The site is built with a focus on semantic code and accessibility, providing a premium experience for potential clients.",
     features: [
-      "Drag-and-Drop Interface",
-      "Customizable Columns",
-      "Task Labeling & Priority",
-      "Real-time State Sync",
-      "Collaborative Workspaces"
+      "Interactive SVG Animations (SnapSVG)",
+      "Multi-step Project Inquiry & Quote Form",
+      "Dynamic Project Showcase with Filtering",
+      "Responsive & Accessible UI/UX Design",
+      "Performance-Optimized Component Architecture"
     ],
-    tech: ["Vue.js", "Firebase", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: "#"
+    tech: ["React", "TypeScript", "Vite", "SnapSVG", "Tailwind CSS"],
+    github: "https://github.com/audreylyn/likhasiteworksv1",
+    live: "https://likhasiteworks.studio/"
   },
   {
     id: 6,
-    title: "Weather Forecast",
-    category: "API Integration",
-    description: "A location-based weather app providing current conditions and 5-day forecasts using OpenWeatherMap API with dynamic background themes.",
-    fullDescription: "Leveraging the OpenWeatherMap API, this application delivers precise weather data. It features a dynamic UI that adapts its color palette and imagery based on the current weather conditions of the searched location, providing an immersive user experience.",
+    title: "LikhaQR",
+    category: "SaaS Platform",
+    description: "A next-gen dynamic QR platform featuring AR magic, VR tours, and smart tracking analytics.",
+    fullDescription: "LikhaQR is an advanced SaaS platform that redefines QR codes by integrating Augmented Reality (AR) and Virtual Reality (VR). Users can create dynamic QR codes that overlay videos on physical targets or launch 360° VR tours. The platform includes a full-featured QR Studio for custom designs and a robust analytics dashboard for tracking scans and engagement.",
     features: [
-      "Geolocation Detection",
-      "5-Day / 3-Hour Forecast",
-      "Dynamic Background Themes",
-      "City Search History",
-      "Detailed Meteorological Data"
+      "AR Magic: Video & 3D Object Overlays",
+      "VR Tours: Immersive 360° Photo Viewer",
+      "Dynamic QR Redirects with Smart Tracking",
+      "Custom QR Studio (Colors, Logos, Eye Styles)",
+      "Supabase Backend with Real-time Analytics"
     ],
-    tech: ["JavaScript", "HTML5", "CSS3", "API"],
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1600&auto=format&fit=crop",
-    github: "#",
-    live: "#"
+    tech: ["React", "TypeScript", "Supabase", "A-Frame", "MindAR.js"],
+    github: "https://github.com/audreylyn/LikhaQR",
+    live: "https://likha-qr.vercel.app/"
+  },
+  {
+    id: 7,
+    title: "WebSys Portfolio",
+    category: "Web Development",
+    description: "A comprehensive collection of web systems projects and academic assignments.",
+    fullDescription: "This portfolio showcases a series of web development projects created for the Web Systems course. It includes various implementations of front-end and back-end technologies, demonstrating proficiency in building functional and responsive web applications.",
+    features: [
+      "Responsive Design",
+      "Interactive UI Components",
+      "Form Validation",
+      "Database Integration",
+      "Academic Project Showcase"
+    ],
+    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    github: "https://github.com/audreylyn/websys_portfolio"
+  },
+  {
+    id: 8,
+    title: "ZenLeaf",
+    category: "E-commerce / Wellness",
+    description: "A serene and minimalist landing page for a wellness brand focusing on natural products.",
+    fullDescription: "ZenLeaf is a conceptual wellness platform designed with a focus on tranquility and natural aesthetics. It features a clean, minimalist interface that highlights product benefits and brand philosophy, providing a seamless user experience for health-conscious consumers.",
+    features: [
+      "Minimalist UI/UX",
+      "Product Showcase",
+      "Responsive Layout",
+      "Smooth Animations",
+      "Brand Storytelling"
+    ],
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/audreylyn/zenleaf"
+  },
+  {
+    id: 9,
+    title: "Space Travel",
+    category: "Interactive Web Experience",
+    description: "An immersive multi-page website exploring the wonders of space travel and planetary destinations.",
+    fullDescription: "Space Travel is an interactive web application that takes users on a journey through the solar system. It features detailed information about planets, crew members, and space technology, all presented through a modern and immersive interface designed to inspire curiosity about the cosmos.",
+    features: [
+      "Multi-page Navigation",
+      "Interactive Planetary Data",
+      "Immersive Visuals",
+      "Responsive Design",
+      "Dynamic Content Loading"
+    ],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    github: "https://github.com/audreylyn/space-travel"
   }
 ];
 
@@ -163,21 +205,31 @@ const Projects: React.FC = () => {
               Beyond my internship duties, I actively develop web applications. <br className="hidden md:block"/>Swipe to explore more.
             </p>
             {/* Navigation Buttons */}
-            <div className="flex gap-2">
-                <button 
-                    onClick={() => scroll('left')}
-                    className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
-                    aria-label="Previous Projects"
+            <div className="flex items-center gap-4">
+                <a 
+                    href="https://github.com/audreylyn?tab=repositories" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-orange-600 transition-colors mr-4"
                 >
-                    <ArrowLeft className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
-                </button>
-                <button 
-                    onClick={() => scroll('right')}
-                    className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
-                    aria-label="Next Projects"
-                >
-                    <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
-                </button>
+                    View All Projects <ExternalLink className="w-3 h-3" />
+                </a>
+                <div className="flex gap-2">
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
+                        aria-label="Previous Projects"
+                    >
+                        <ArrowLeft className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
+                    </button>
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="w-12 h-12 border border-stone-300 flex items-center justify-center hover:bg-white transition-colors rounded-full active:scale-95 group"
+                        aria-label="Next Projects"
+                    >
+                        <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-black transition-colors" />
+                    </button>
+                </div>
             </div>
           </div>
         </div>
@@ -193,19 +245,6 @@ const Projects: React.FC = () => {
               onClick={() => setSelectedProject(project)}
               className="min-w-[85vw] md:min-w-[400px] lg:min-w-[450px] snap-center group flex flex-col bg-stone-50 border border-stone-200 hover:border-orange-500/30 transition-all duration-300 shadow-sm cursor-pointer"
             >
-              {/* Image Container */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                  <ExternalLink className="w-4 h-4 text-stone-900" />
-                </div>
-              </div>
-
               {/* Content */}
               <div className="p-8 flex flex-col flex-grow">
                 <div className="mb-6">
@@ -232,6 +271,25 @@ const Projects: React.FC = () => {
               </div>
             </div>
           ))}
+
+          {/* View More Card */}
+          <div className="min-w-[85vw] md:min-w-[400px] lg:min-w-[450px] snap-center group flex flex-col bg-stone-200/50 border border-dashed border-stone-300 hover:border-orange-500/50 transition-all duration-300 shadow-sm">
+            <a 
+              href="https://github.com/audreylyn?tab=repositories" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center flex-grow p-8 text-center group"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                <Github className="w-8 h-8 text-stone-400 group-hover:text-orange-600 transition-colors" />
+              </div>
+              <h3 className="text-xl font-display text-stone-900 mb-2">View More Projects</h3>
+              <p className="text-sm text-stone-500 mb-6">Explore my full repository on GitHub</p>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-600">
+                Visit GitHub <ExternalLink className="w-3 h-3" />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -243,34 +301,17 @@ const Projects: React.FC = () => {
             onClick={() => setSelectedProject(null)}
           ></div>
           
-          <div className="relative w-full max-w-6xl max-h-[90vh] bg-stone-50 border border-stone-200 shadow-2xl overflow-hidden flex flex-col md:flex-row animate-modal-slide-up rounded-2xl">
+          <div className="relative w-full max-w-4xl max-h-[90vh] bg-stone-50 border border-stone-200 shadow-2xl overflow-hidden flex flex-col animate-modal-slide-up rounded-2xl">
             
-            {/* Close Button Mobile */}
-            <button 
-                onClick={() => setSelectedProject(null)}
-                className="md:hidden absolute top-4 right-4 z-50 p-2 bg-white/80 backdrop-blur rounded-full text-stone-500 hover:text-stone-900 transition-colors"
-            >
-                <X className="w-5 h-5" />
-            </button>
-
-            {/* Left/Top: Image & Quick Actions */}
-            <div className="w-full md:w-5/12 h-64 md:h-auto relative bg-stone-200">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden"></div>
+            {/* Content */}
+            <div className="w-full flex flex-col overflow-y-auto custom-scrollbar bg-stone-50">
                 
-                {/* Overlay Title Mobile */}
-                <div className="absolute bottom-0 left-0 p-6 md:hidden text-white">
-                    <span className="text-xs text-orange-400 uppercase tracking-widest mb-1 block">{selectedProject.category}</span>
-                    <h2 className="text-2xl font-display">{selectedProject.title}</h2>
-                </div>
-            </div>
-
-            {/* Right/Bottom: Content */}
-            <div className="w-full md:w-7/12 flex flex-col overflow-y-auto custom-scrollbar bg-stone-50">
-                
-                {/* Header Actions Desktop */}
-                <div className="hidden md:flex justify-between items-center p-8 md:p-10 border-b border-stone-200 sticky top-0 bg-stone-50/95 backdrop-blur z-20">
-                    <h2 className="text-3xl font-display text-stone-900">{selectedProject.title}</h2>
+                {/* Header Actions */}
+                <div className="flex justify-between items-center p-6 md:p-10 border-b border-stone-200 sticky top-0 bg-stone-50/95 backdrop-blur z-20">
+                    <div>
+                        <span className="text-[10px] text-orange-600 uppercase tracking-widest mb-1 block">{selectedProject.category}</span>
+                        <h2 className="text-2xl md:text-3xl font-display text-stone-900">{selectedProject.title}</h2>
+                    </div>
                     <button 
                         onClick={() => setSelectedProject(null)}
                         className="p-2 bg-stone-100 rounded-full text-stone-500 hover:text-stone-900 transition-colors"

@@ -129,7 +129,11 @@ const BentoGrid: React.FC = () => {
             {/* Resume & Socials Grid */}
             <div className="grid grid-cols-2 gap-6 min-h-[180px]">
                 {/* Resume */}
-                <a href="#" className="bg-stone-900 p-6 rounded-2xl flex flex-col justify-between group hover:bg-stone-800 transition-colors">
+                <a 
+                    href="images/certificates/resume.pdf" 
+                    download="Audreylyn_Morana_Resume.pdf"
+                    className="bg-stone-900 p-6 rounded-2xl flex flex-col justify-between group hover:bg-stone-800 transition-colors"
+                >
                     <div className="flex justify-between items-start">
                         <Download className="w-6 h-6 text-white" />
                         <ArrowRight className="w-4 h-4 text-stone-500 group-hover:text-white group-hover:-rotate-45 transition-all" />
@@ -141,7 +145,7 @@ const BentoGrid: React.FC = () => {
                 </a>
 
                 {/* Socials - LinkedIn */}
-                <a href="#" className="bg-white p-6 rounded-2xl flex flex-col justify-between group border border-stone-200 hover:border-blue-500/50 transition-colors">
+                <a href="https://www.linkedin.com/in/audreylyn-mora%C3%B1a-55b3b7371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="bg-white p-6 rounded-2xl flex flex-col justify-between group border border-stone-200 hover:border-blue-500/50 transition-colors">
                     <div className="flex justify-between items-start">
                         <Linkedin className="w-6 h-6 text-[#0077b5]" />
                         <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-[#0077b5] group-hover:-rotate-45 transition-all" />

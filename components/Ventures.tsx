@@ -34,9 +34,8 @@ const ventures: Venture[] = [
     iconBg: 'bg-blue-100 text-blue-600',
     gallery: [
       'images/learningAims/Troubleshooting1.jpg',
-      'images/learningAims/Troubleshooting2.jpg',
-      'images/learningAims/Troubleshooting3.jpg',
-      'images/learningAims/Troubleshooting4.jpg'
+      'images/learningAims/duties4.jpg',
+      'images/learningAims/duty.jpg'
     ]
   },
   {
@@ -61,8 +60,8 @@ const ventures: Venture[] = [
     iconBg: 'bg-purple-100 text-purple-600',
     gallery: [
       'images/learningAims/Management1.jpeg',
-      'images/learningAims/Management2.jpg',
-      'images/learningAims/Management3.jpg'
+      'images/learningAims/schedule1.jpg',
+      'images/learningAims/schedule2.jpg'
     ]
   },
   {
@@ -78,19 +77,6 @@ const ventures: Venture[] = [
       'images/learningAims/Networking3.jpeg'
     ]
   },
-  {
-    icon: <FileText className="w-5 h-5" />,
-    color: 'cyan',
-    title: 'Documentation',
-    desc: 'Improving documentation and reporting practices for IT operations.',
-    stat: 'Reporting',
-    iconBg: 'bg-cyan-100 text-cyan-600',
-    gallery: [
-      'images/learningAims/Documentation1.jpg',
-      'images/learningAims/Documentation2.jpg',
-      'images/learningAims/Documentation3.jpg'
-    ]
-  }
 ];
 
 const Ventures: React.FC = () => {

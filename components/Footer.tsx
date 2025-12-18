@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex flex-col gap-4">
                     <span className="text-xs text-stone-400 uppercase tracking-widest mb-2 font-semibold">Socials</span>
-                    <a href="#" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">LinkedIn</a>
-                    <a href="#" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/audreylyn-mora%C3%B1a-55b3b7371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">LinkedIn</a>
+                    <a href="https://github.com/audreylyn" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">GitHub</a>
                     <a href="#" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">Facebook</a>
                 </div>
             </div>

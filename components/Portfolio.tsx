@@ -48,13 +48,13 @@ const projects: Project[] = [
     id: '02',
     name: 'Supervision',
     location: 'Site Supervisor',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop',
+    image: 'images/supervision/supervision1.jpg',
     type: 'Leadership',
     valuation: 'Mentorship',
     description: 'Directly supervised by Sir Diomil Agbayani (09201063627), ensuring streamlined technical operations.',
     details: 'I reported directly to Sir Diomil Agbayani throughout my internship. The supervision structure was collaborative, allowing for hands-on learning in troubleshooting and resolving technical issues while maintaining professional documentation standards.',
     features: ['Sir Diomil Agbayani', 'Direct Reporting', 'Collaboration', 'Guidance'],
-    gallery: ['images/supervision1.jpg', 'images/supervision2.jpg', 'images/supervision3.jpg', 'images/supervision4.jpg'],
+    gallery: ['images/supervision/supervision5.jpg', 'images/supervision/supervision2.jpg', 'images/supervision/supervision3.jpg', 'images/supervision/supervision4.jpg'],
     theme: {
         light: { mainBg: '#f1f5f9', subBg: '#f8fafc', text: '#475569', title: '#0f172a', border: '#e2e8f0' }, // Slate
         dark: { mainBg: '#0f172a', subBg: '#020617', text: '#94a3b8', title: '#f1f5f9', border: 'rgba(255,255,255,0.05)' }
@@ -64,13 +64,13 @@ const projects: Project[] = [
     id: '03',
     name: 'Schedule',
     location: 'Mon-Sat',
-    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop',
+    image: 'images/schedule/schedule1.jpg',
     type: 'Timeframe',
     valuation: '8AM - 5PM',
     description: 'Adhering to a reporting schedule of Monday to Saturday, 8:00 AM – 5:00 PM.',
     details: 'My internship followed a rigorous six-day work week schedule from 8:00 AM to 5:00 PM. This consistency allowed me to be fully immersed in the daily operations of the IT department, from morning system checks to end-of-day reporting.',
     features: ['Monday-Saturday', '8:00 AM - 5:00 PM', 'Full Time', 'On-Site'],
-    gallery: [],
+    gallery: ['images/schedule/schedule1.jpg', 'images/schedule/schedule2.jpg'],
     theme: {
         light: { mainBg: '#fff7ed', subBg: '#fffaf5', text: '#c2410c', title: '#431407', border: '#ffedd5' }, // Orange
         dark: { mainBg: '#2a100a', subBg: '#1a0b06', text: '#fdba74', title: '#fff7ed', border: 'rgba(255,255,255,0.05)' }
