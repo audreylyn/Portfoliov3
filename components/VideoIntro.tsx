@@ -24,7 +24,7 @@ const VideoIntro: React.FC = () => {
           {/* Vimeo Embed */}
           {/* Replace the 'src' URL below with your specific Vimeo video link */}
           <iframe 
-            src="https://player.vimeo.com/video/76979871?title=0&byline=0&portrait=0" 
+            src="https://player.vimeo.com/video/1148233527?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
             className="absolute top-0 left-0 w-full h-full" 
             frameBorder="0" 
             allow="autoplay; fullscreen; picture-in-picture" 
